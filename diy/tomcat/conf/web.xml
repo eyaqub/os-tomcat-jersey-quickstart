@@ -509,7 +509,21 @@
         <session-timeout>30</session-timeout>
     </session-config>
 
-
+    <servlet>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    
   <!-- ===================== Default MIME Type Mappings =================== -->
   <!-- When serving static resources, Tomcat will automatically generate    -->
   <!-- a "Content-Type" header based on the resource's filename extension,  -->
