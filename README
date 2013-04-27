@@ -10,22 +10,22 @@ Running on OpenShift
 Create an account at http://openshift.redhat.com/
 or on any OpenShift Origin based PaaS Cloud
 
-Create a DIY application
+Create a DIY application:
 
-rhc app-create -t diy-0.1 -a tomcatj
+        rhc app-create -t diy-0.1 -a tomcatj
 
 Get Tomcat running
 ------------------
 
-cd tomcatj
-git remote add upstream -m master git://github.com/eyaqub/os-tomcat-jersey-quickstart.git
-git pull -s recursive -X theirs upstream master
+        cd tomcatj
+        git remote add upstream -m master git://github.com/eyaqub/os-tomcat-jersey-quickstart.git
+        git pull -s recursive -X theirs upstream master
 
 Then push the repo upstream to OpenShift
 
-git push
+        git push
 
 That's it, you can now checkout your application at:
 
-http://tomcatj-$yourlogin.rhcloud.com
+        http://tomcatj-$yourlogin.rhcloud.com
 
