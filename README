@@ -15,6 +15,7 @@ Create a DIY application
 rhc app-create -t diy-0.1 -a tomcatj
 
 Get Tomcat running
+------------------
 
 cd tomcatj
 git remote add upstream -m master git://github.com/eyaqub/os-tomcat-jersey-quickstart.git
